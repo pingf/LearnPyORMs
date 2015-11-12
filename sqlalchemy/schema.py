@@ -2,14 +2,14 @@
 # -*- coding: utf-8 -*-
 
 from sqlalchemy import (create_engine, Table, Column, Integer,
-    String, MetaData)
+                        String, MetaData)
 
 meta = MetaData()
 cars = Table('Cars', meta,
-     Column('Id', Integer, primary_key=True),
-     Column('Name', String),
-     Column('Price', Integer)
-)
+             Column('Id', Integer, primary_key=True),
+             Column('Name', String),
+             Column('Price', Integer)
+             )
 
 print("The Name column:")
 print(cars.columns.Name)
@@ -28,3 +28,7 @@ print(cars.c.Id.name)
 print(cars.c.Id.type)
 print(cars.c.Id.nullable)
 print(cars.c.Id.primary_key)
+
+print('-'*10)
+for table in meta.tables:
+    print(table)
