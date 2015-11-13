@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from sqlalchemy import (create_engine, Table, Column, Integer,
-    String, MetaData)
+                        String, MetaData)
 
 eng = create_engine("mysql+pymysql://root:123456@localhost/test0")
 

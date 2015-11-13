@@ -10,12 +10,14 @@ eng = create_engine("mysql+pymysql://root:123456@localhost/test0")
 
 Base = declarative_base()
 
+
 class Car(Base):
     __tablename__ = "Cars"
 
     Id = Column(Integer, primary_key=True)
     Name = Column(String)
     Price = Column(Integer)
+
 
 Session = sessionmaker(bind=eng)
 ses = Session()
