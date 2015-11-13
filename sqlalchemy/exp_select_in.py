@@ -25,7 +25,7 @@ with eng.connect() as con:
     for row in rs:
         print(row['Id'], row['Name'], row['Price'])
 
-    k = [(2, ), (4, ), (6, ), (8, )]
+    k = [(2,), (4,), (6,), (8,)]
     stm = select([cars]).where(tuple_(cars.c.Id).in_(k))
     print('----')
     print(to_sql(stm))

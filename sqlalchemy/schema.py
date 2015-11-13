@@ -29,6 +29,6 @@ print(cars.c.Id.type)
 print(cars.c.Id.nullable)
 print(cars.c.Id.primary_key)
 
-print('-'*10)
+print('-' * 10)
 for table in meta.tables:
     print(table)

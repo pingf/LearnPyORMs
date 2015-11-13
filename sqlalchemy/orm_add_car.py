@@ -24,7 +24,6 @@ ses = Session()
 
 c1 = Car(Name='Oldsmobile', Price=23450)
 ses.add(c1)
-
 ses.commit()
 
 rs = ses.query(Car).all()
